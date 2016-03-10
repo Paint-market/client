@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import path from 'path'
 import bodyParser from 'body-parser'
+import fs from 'fs'
 
 const router = Router()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -20,11 +21,11 @@ router.get('/market', (req, res) => {
 
 router.get('/market/paintings', urlencodedParser, function (req, res) {
     // console.log("REQ", req)
-    // var jsonPath = path.join(__dirname, '../data/db.json')
-    // console.log(jsonPath)
-    // fs.readFile(jsonPath, 'utf8', function (err, data){
-        // console.log(data)
-    // })
+    var jsonPath = path.join(__dirname, '../data/db.json')
+    console.log(jsonPath)
+    fs.readFile(jsonPath, 'utf8', function (err, data){
+        console.log(data)
+    })
   })
 
 export default router
