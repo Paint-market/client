@@ -4,7 +4,8 @@
   "description": "client facing interactions for paint and market",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base public --inline --hot"
+    "build": "webpack-dev-server --content-base public --inline --hot",
+    "start": "nodemon ./node_modules/babel-cli/bin/babel-node.js ./index.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "express": "^4.13.4",
     "jquery": "^2.2.1",
     "knex": "^0.10.0",
+    "nodemon": "^1.9.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.1",
