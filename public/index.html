@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <title>Paint Market</title>
   </head>
   <body>
+
     <div id="app"></div>
+
+     <div id="login-forms" class="container-fluid">
+      <div id="signin-form" class="col-md-4 col-md-offset-2">
+        <h2>Sign in</h2>
+        
+          <form>
+            <div class="form-group">
+              <label for="signinEmailInput">Email address</label>
+              <input type="email" class="form-control" id="signin-email-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="signinInputPassword">Password</label>
+              <input type="password" class="form-control" id="signin-password-input" placeholder="Password">
+            </div>
+            <button id="submit-signin" type="submit" class="btn btn-default">Submit</button>
+          </form>
+      </div>
+
+      <div id="signup-form" class="col-md-4">
+        <h2>Sign up</h2>
+        <div class="form-group">
+          <form>
+            <div class="form-group">
+              <label for="usernameInput">Username</label>
+              <input type="text" class="form-control" id="username-input" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="signupEmailInput">Email address</label>
+              <input type="email" class="form-control" id="signup-email-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="signupPasswordInput">Password</label>
+              <input type="password" class="form-control" id="signup-password-input" placeholder="Password">
+            </div>
+            <button id="submit-signup" type="submit" class="btn btn-default">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
     <script src="bundle.js" ></script>
   </body>
 </html>
