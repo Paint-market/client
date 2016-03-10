@@ -1,4 +1,12 @@
-h1, .home-h1 {
+.navbar-brand {
+  font-family: 'Monoton', cursive;
+  font-size: 2em;
+}
+
+.Wallet {
+  background-color: black;
+  font-size: 2em;
+  color: gold;
   text-align: center;
-  font-size: 6vw;
+  padding: 5px;
 }
