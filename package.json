@@ -4,6 +4,7 @@
   "description": "client facing interactions for paint and market",
   "main": "index.js",
   "scripts": {
+    "watch-canvas": "",
     "build": "webpack-dev-server --content-base public --inline --hot",
     "start": "nodemon ./node_modules/babel-cli/bin/babel-node.js ./index.js"
   },
