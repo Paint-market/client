@@ -4,9 +4,6 @@
 }
 
 .Wallet {
-  background-color: black;
-  font-size: 2em;
-  color: gold;
-  text-align: center;
-  padding: 7px;
+  color: #D00000;
+  font-weight: bold;
 }
