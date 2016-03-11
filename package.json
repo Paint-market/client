@@ -4,7 +4,9 @@
   "description": "client facing interactions for paint and market",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --colors --watch",
+    "watch-canvas": "watchify ./lib/canvas-entrypoint.js -o ./public/canvas-bundle.js -t [ babelify --presets [ es2015 react stage-0 ] ] -dv",
+    "build-canvas": "browserify ./lib/canvas-entrypoint.js -o ./public/canvas-bundle.js -t [ babelify --presets [ es2015 react stage-0 ] ] -dv",
+    "build": "webpack-dev-server --content-base public --inline --hot",
     "start": "nodemon ./node_modules/babel-cli/bin/babel-node.js ./index.js"
   },
   "repository": {
@@ -33,6 +35,7 @@
     "backbone-model": "^1.0.10",
     "backbone-super-sync": "^1.1.1",
     "body-parser": "^1.15.0",
+    "browserify": "^13.0.0",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "domready": "^1.0.8",
@@ -50,6 +53,8 @@
     "sqlite3": "^3.1.1",
     "style-loader": "^0.13.0",
     "superagent": "^1.8.0-beta.2",
+    "uuid": "^2.0.1",
+    "watchify": "^3.7.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
