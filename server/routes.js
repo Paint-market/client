@@ -2,6 +2,7 @@ import { Router } from 'express'
 import path from 'path'
 import bodyParser from 'body-parser'
 import fs from 'fs'
+import request from 'superagent'
 
 const router = Router()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
