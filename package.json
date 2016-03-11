@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress --colors --watch",
-    "start": "nodemon ./node_modules/babel-cli/bin/babel-node.js ./index.js"
+    "start": "nodemon ./node_modules/babel-cli/bin/babel-node.js ./index.js",
+    "watch-login": "watchify ./lib/login-entry.js -o ./public/login-bundle.js -t [ babelify --presets [ es2015 react stage-0 ] ] -dv",
+    "build-login": "browserify ./lib/login-entry.js -o ./public/login-bundle.js -t [ babelify --presets [ es2015 react stage-0 ] ] -dv"
   },
   "repository": {
     "type": "git",
